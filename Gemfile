@@ -23,10 +23,12 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'powder'
 end
 
 group :test do
-  gem 'powder'
+  gem 'capybara'
 end
 
 group :production do
