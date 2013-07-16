@@ -4,11 +4,11 @@ describe "Static Pages" do
   
   describe "Home page" do
     it "should have the right heading" do
-      visit '/static_pages/home'
+      visit root_path
       page.should have_selector('h1', :text => "Home Page")
     end
     it "should have the content 'Home Page'" do
-      visit '/static_pages/home'
+      visit root_path
       page.should have_content('Home Page')
     end
     
@@ -16,11 +16,11 @@ describe "Static Pages" do
 
   describe "Admin page" do
     it "should have the right heading" do
-      visit '/static_pages/admin'
+      visit admin_path
       page.should have_selector('h1', :text => "Admin Page")
     end
     it "should have the content 'Admin Page'" do
-      visit '/static_pages/admin'
+      visit admin_path
       page.should have_content('Admin Page')
     end
   end
