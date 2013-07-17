@@ -1,0 +1,23 @@
+<% provide(:title, 'Inspection Details') %>
+<div class="center hero-unit">
+	<h1>Inspection Details</h1>
+	<p id="notice"><%= notice %></p>
+	<p>
+	<b>Business:</b>
+	<%= @inspection.business_id %>
+	</p>
+	<p>
+	<b>Score:</b>
+	<%= @inspection.score %>
+	</p>
+	<p>
+	<b>Date:</b>
+	<%= @inspection.date %>
+	</p>
+	<p>
+	<b>Type:</b>
+	<%= @inspection.type %>
+	</p>
+	<%= link_to 'Edit', edit_inspection_path(@inspection) %> |
+	<%= link_to 'Back', inspections_path %>
+</div>

@@ -1,0 +1,35 @@
+<% provide(:title, 'Business Details') %>
+<div class="center hero-unit">
+  <h1>Business Details</h1>
+  <p id="notice"><%= notice %></p>
+  <p>
+  <b>Name:</b>
+  <%= @business.name %>
+  </p>
+  <p>
+  <b>Address:</b>
+  <%= @business.address %>
+  </p>
+  <p>
+  <b>City:</b>
+  <%= @business.city %>
+  </p>
+  <p>
+  <b>State:</b>
+  <%= @business.state %>
+  </p>
+  <p>
+  <b>Postal code:</b>
+  <%= @business.postal_code %>
+  </p>
+  <p>
+  <b>Latitude:</b>
+  <%= @business.latitude %>
+  </p>
+  <p>
+  <b>Longitude:</b>
+  <%= @business.longitude %>
+  </p>
+  <%= link_to 'Edit', edit_business_path(@business) %> |
+  <%= link_to 'Back', businesses_path %>
+</div>

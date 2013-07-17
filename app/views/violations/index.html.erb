@@ -1,0 +1,30 @@
+<% provide(:title, 'Violations') %>
+<div class="center hero-unit">
+    <h1>Violations</h1>
+    <table>
+        <tr>
+            <th>Business</th>
+            <th>Date</th>
+            <th>Violation type</th>
+            <th>Violation severity</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <% @violations.each do |violation| %>
+        <tr>
+            <td><%= violation.business_id %></td>
+            <td><%= violation.date %></td>
+            <td><%= violation.violation_type_id %></td>
+            <td><%= violation.violation_severity %></td>
+            <td><%= violation.description %></td>
+            <td><%= link_to 'Show', violation %></td>
+            <td><%= link_to 'Edit', edit_violation_path(violation) %></td>
+            <td><%= link_to 'Destroy', violation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </table>
+    <br />
+    <%= link_to 'New Violation', new_violation_path %>
+</div>

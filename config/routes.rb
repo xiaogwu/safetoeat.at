@@ -1,4 +1,13 @@
 SafetoeatAt::Application.routes.draw do
+  resources :inspections
+
+
+  resources :violations
+
+
+  resources :businesses
+
+
   root to: 'static_pages#home'
   # get "static_pages/home"
   # match '/', to: 'static_pages#home'

@@ -1,0 +1,27 @@
+<% provide(:title, 'Violation Details') %>
+<div class="center hero-unit">
+  <h1>Violation Details</h1>
+  <p id="notice"><%= notice %></p>
+  <p>
+  <b>Business:</b>
+  <%= @violation.business_id %>
+  </p>
+  <p>
+  <b>Date:</b>
+  <%= @violation.date %>
+  </p>
+  <p>
+  <b>Violation type:</b>
+  <%= @violation.violation_type_id %>
+  </p>
+  <p>
+  <b>Violation severity:</b>
+  <%= @violation.violation_severity %>
+  </p>
+  <p>
+  <b>Description:</b>
+  <%= @violation.description %>
+  </p>
+  <%= link_to 'Edit', edit_violation_path(@violation) %> |
+  <%= link_to 'Back', violations_path %>
+</div>
